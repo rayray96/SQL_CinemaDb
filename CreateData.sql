@@ -54,10 +54,10 @@ VALUES
 GO
 
 INSERT INTO [DeliveryMethods]
-([DeliveryMethodName])
+([DeliveryMethodName], [StandardEviation])
 VALUES
-('2D'),
-('3D')
+('2D', 1),
+('3D', 1.25)
 GO
 
 INSERT INTO [MovieDeliveryMethods]
@@ -81,7 +81,7 @@ VALUES
 ('Delta',	30)
 GO
 
-INSERT INTO [Sessions]
+INSERT INTO [tbSessions]
 ([SessionDateTime], [HallId], [MovieDeliveryMethodsId])
 VALUES
 ('5/20/2019 12:00:00', 1, 1),
